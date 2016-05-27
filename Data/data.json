@@ -1,0 +1,41 @@
+{
+    "type": "Building a Rounds",
+    "data": [
+      {
+        "trigger": "Checkin",
+        "response": ["User Found. Enter Password"],
+        "log": 1,
+        "flag": "u_id"
+      },
+      {
+        "trigger": "test",
+        "response": ["Password Confirmed","Check on Site Phone Battery"],
+        "log": 1,
+        "flag": "pass"
+      },
+      {
+        "trigger": "Confirm",
+        "response": ["Call Command Center to Perform 10-4 Checkin"],
+        "log": 0,
+        "flag": ""
+      },
+      {
+        "trigger": "Confirm",
+        "response": ["Open Near Building Entrace for Janitorial Staff at 4:00am"],
+        "log": 0,
+        "flag": ""
+      },
+      {
+        "trigger": "Confirm",
+        "response": ["Perform Patrol of Business Park Every 2 Hours"],
+        "log": 0,
+        "flag": ""
+      },
+      {
+        "trigger": "Confirm",
+        "response": ["Rounds and Checkin Complete"],
+        "log": 0,
+        "flag": "terminate"
+      }
+    ]
+}

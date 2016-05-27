@@ -1,0 +1,20 @@
+{
+  "name": "roundscheckin",
+  "version": "1.0.0",
+  "description": "a small app to allow users to check in on rounds via sms",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "author": "Deen Aariff",
+  "license": "MIT",
+  "dependencies": {
+    "ee-first": "^1.1.1",
+    "express": "^4.13.4",
+    "http-errors": "^1.5.0",
+    "ms": "^0.7.1",
+    "socket.io": "^1.4.6",
+    "twilio": "^2.9.1",
+    "unpipe": "^1.0.0"
+  }
+}
