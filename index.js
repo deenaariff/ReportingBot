@@ -22,16 +22,9 @@ var index = 0;
 var protocol = require('./Data/data.json');
 var users = {
   "01": {
-    "u_name": "Deen",
+    "u_name": "Jonathan",
     "history": [{ "check_in": 3939,
                 "check_out": 39393}]
-  },
-  "02": {
-    "u_name": "Unmol",
-    "history": [{
-      "check_in": 3939,
-      "check_out": 39393
-    }]
   }
 };
 

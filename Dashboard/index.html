@@ -21,11 +21,11 @@
           <h5 class="center-align">Radar Checkin Sample App</h5>
       </div>
       <div class="row valign">
-          <div ng-repeat = "user in users" class="col s12 m2 offset-m3">
+          <div ng-repeat = "user in users" class="col s12 m3 offset-m2">
             <div class="card red darken-1 darken-1">
               <div class="card-content white-text">
                 <span class="card-title">{{ user.u_name }}</span>
-                <p ng-repeat = "sesh in user.history"> In: {{ sesh.check_in }} - Out: {{sesh.check_out}}</p>
+                <p ng-repeat = "sesh in user.history"> In: {{ timeFormat(sesh.check_in) }} - Out: {{ timeFormat(sesh.check_out) }}</p>
               </div>
               <div class="card-action">
                 <a href="#">History</a>
