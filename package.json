@@ -9,6 +9,7 @@
   "author": "Deen Aariff",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.15.1",
     "ee-first": "^1.1.1",
     "express": "^4.13.4",
     "http-errors": "^1.5.0",

@@ -1,54 +1,40 @@
-< DOCTYPE! html>
 
-    <html ng-app="App">
+<html>
 
-    <!-- All Dependencies used in Application-->
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/style.css" >
-        <script href="./js/app.js"></script>
-        <script href="./js/controller.js"></script>
-        <script href="./js/services.js"></script>
-    </head>
+<head>
 
-    <body ng-controller="MainCtrl">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="https://cdn.socket.io/socket.io-1.3.7.js"></script>
+  <script type="text/javascript" src="./angular/socket.io.js"></script>
+  <script type="text/javascript" src="./angular/app.js"></script>
+  <script type="text/javascript" src="./angular/controller.js"></script>
+  <script type="text/javascript" src="./angular/services.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-        <!-- Navbar-->
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Brand</a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a>
-                        </li>
-                        <li><a href="#about">About</a>
-                        </li>
-                        <li><a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <!--/.nav-collapse -->
+</head>
+
+<body ng-app = "Radar" ng-controller="MainCtrl">
+
+      <div class="row">
+          <h5 class="center-align">Radar Checkin Sample App</h5>
+      </div>
+      <div class="row valign">
+          <div ng-repeat = "user in users" class="col s12 m2 offset-m3">
+            <div class="card red darken-1 darken-1">
+              <div class="card-content white-text">
+                <span class="card-title">{{ user.u_name }}</span>
+                <p ng-repeat = "sesh in user.history"> In: {{ sesh.check_in }} - Out: {{sesh.check_out}}</p>
+              </div>
+              <div class="card-action">
+                <a href="#">History</a>
+              </div>
             </div>
-        </div>
-
-        <!-- Dashboard -->
-        <div class="col-xs-12 dash">
-            <div class="col-xs-10 col-md-3">
-                <h1> Clockin Round Reports </h1>
-                <h2 ng-repeat="data in data"> {{ data.u_name }} clocked in at {{ data.t_samp }} </h2>
-            </div>
+          </div>
         </div>
 
 
-    </body>
+</body>
 
-
-
-    </html>
+</html>

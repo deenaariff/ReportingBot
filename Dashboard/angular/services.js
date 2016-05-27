@@ -3,7 +3,7 @@ var services = angular.module('Services', [])
 services.service('SocketIO', function($rootScope) {
 
     // Initialize socket
-    var socket = io.connect();
+    var socket = io();
 
     return {
 

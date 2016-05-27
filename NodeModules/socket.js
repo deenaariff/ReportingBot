@@ -1,6 +1,3 @@
-var io, users, ot;
-var text = "";
-
 // Export initializer function for Socket Module
 exports.init = function(_io, _users) {
       io = _io;
@@ -11,11 +8,14 @@ exports.init = function(_io, _users) {
 exports.listen = function() {
       io.on('connection', function(socket) {
 
-              function updateData() = io.emit('data:update', users);
+              console.log("Socket IO initialized");
+
+              socket.emit('data:update', users);
 
               socket.on('data:init', function () {
-                    updateData();
-              }
+                    console.log('Updated Data');
+                    socket.emit('data:update', users);
+              });
 
-      };
+      });;
 }
