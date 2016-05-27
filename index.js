@@ -13,6 +13,8 @@ var io = require('socket.io')(http);
 
 // Setup Express and Body Parser
 var app = express();
+// Use Express
+app.use(express.static('./Dashboard/'));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -29,7 +31,9 @@ var protocol = require('./Data/data.json');
 var users = [];
 
 // Handles Users Who Wish to See Logged date
-app.get('/', function(req, res) {});
+app.get('/', function(req, res) {
+            res.sendFile(__dirname + '/index.html');
+});
 
 // Will Handle All Responses to Twilio Server
 app.get('/twilio', function(req, res) {
