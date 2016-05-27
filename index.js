@@ -142,7 +142,4 @@ app.get('/twilio', function(req, res) {
 })
 
 
-// Listen on Port 3000
-http.createServer(app).listen(3000, function() {
-    console.log("Express server listening on port 3000");
-});
+.listen(process.env.PORT || 5000)
