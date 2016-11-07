@@ -3,37 +3,37 @@
     "data": [
       {
         "trigger": "Checkin",
-        "response": ["User Found. Enter Password"],
+        "response": ["User Found. Enter Password"], // Found User
         "log": 1,
         "flag": "u_id"
       },
       {
         "trigger": "test",
-        "response": ["Password Confirmed","Check on Site Phone Battery"],
+        "response": ["Password Confirmed"], //  Confirm Password
         "log": 1,
         "flag": "pass"
       },
       {
         "trigger": "Confirm",
-        "response": ["Call Command Center to Perform 10-4 Checkin"],
+        "response": ["Command1"], // Comand1
         "log": 0,
         "flag": ""
       },
       {
         "trigger": "Confirm",
-        "response": ["Open Near Building Entrace for Janitorial Staff at 4:00am"],
+        "response": ["Open Near Building Entrace for Janitorial Staff at 4:00am"], // Command 2
         "log": 0,
         "flag": ""
       },
       {
         "trigger": "Confirm",
-        "response": ["Perform Patrol of Business Park Every 2 Hours"],
+        "response": ["Perform Patrol of Business Park Every 2 Hours"], // Command 3
         "log": 0,
         "flag": ""
       },
       {
         "trigger": "Confirm",
-        "response": ["Rounds and Checkin Complete"],
+        "response": ["Complete"], // Completion Message
         "log": 0,
         "flag": "terminate"
       }

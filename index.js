@@ -13,7 +13,7 @@ app.use(express.static('./Dashboard/'));
 
 // Twilio Initialization
 var client = require('./NodeModules/twilioInit');
-var TWI_NUMBER = "+14086640384" // Insert Twilio Phone Number
+var TWI_NUMBER = "" // Insert Twilio Phone Number
 
 // Indexing Data (Will Be Abstracted Away into Database)
 // Data to be used (Will Be Abstracted Away into Database)
@@ -82,7 +82,7 @@ app.get('/twilio', function(req, res) {
                 client.sendSMS(req.query.From,
                     TWI_NUMBER,
                     "User [" + num +
-                    "] Has Been Initialized. Password: test. Checkin enabled");
+                    "] Has Been Initialized. Password: test.");
 
                 users[num].index = 0; // Set Index to 0, User Can Interact with Protocol
 
